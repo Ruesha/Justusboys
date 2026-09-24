@@ -3,12 +3,12 @@ import "./Caurosel.css";
 
 import image1 from "../../assets/image_01.png";
 import image2 from "../../assets/image_02.png";
-import image3 from "../../assets/image_03.png";
+import image3 from "../../assets/image_033.png";
 import image4 from "../../assets/image_04.png";
 import image5 from "../../assets/image_05.png";
 import image6 from "../../assets/image_06.png";
-import image7 from "../../assets/image_07.png";
-import image8 from "../../assets/image_08.png";
+import image7 from "../../assets/download.jpg";
+import image8 from "../../assets/new.jpg";
 import image9 from "../../assets/image_09.png";
 
 const IMAGES = [
@@ -62,9 +62,6 @@ export default function Carousel() {
       {/* Background layers */}
       <div className="hero-dots" />
       <div className="hero-glow" />
-
-      <h1 className="carousel-title">Just Us Boys</h1>
-
       <div className="carousel-wrapper">
         <img
           key={current}

@@ -1,0 +1,106 @@
+.impact-belt {
+    width: 100%;
+    box-sizing: border-box;
+    padding: clamp(2.5rem, 5vw, 4.5rem) clamp(1.25rem, 6vw, 7rem);
+    background: #03ac6b;
+    color: #fff;
+}
+
+.impact-belt-list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.impact-belt-item {
+    min-width: 0;
+    padding: 0 clamp(1.25rem, 2.5vw, 2.5rem);
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.impact-belt-item:first-child {
+    padding-left: 0;
+}
+
+.impact-belt-item + .impact-belt-item {
+    border-left: 1px solid rgba(255, 255, 255, .25);
+}
+
+.impact-belt-copy strong {
+    display: block;
+    margin-bottom: .5rem;
+    color: #fff;
+    font-family: "Syne", sans-serif;
+    font-size: clamp(2rem, 3vw, 4rem);
+    font-weight: 650;
+    line-height: .85;
+    letter-spacing: -.07em;
+}
+
+.impact-belt-copy p {
+    max-width: 190px;
+    margin: 0;
+    color: rgba(255, 255, 255, .72);
+    font-family: "Syne", sans-serif;
+    font-size: .78rem;
+    font-weight: 500;
+    line-height: 1.45;
+}
+
+@media (max-width: 800px) {
+    .impact-belt {
+        padding: 3rem 1.5rem;
+    }
+
+    .impact-belt-list {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 2.5rem;
+    }
+
+    .impact-belt-item {
+        padding: 0 1.5rem;
+    }
+
+    .impact-belt-item:nth-child(3) {
+        border-left: 0;
+        padding-left: 0;
+    }
+
+    .impact-belt-item:nth-child(2),
+    .impact-belt-item:nth-child(4) {
+        border-left: 1px solid rgba(255, 255, 255, .25);
+    }
+
+    .impact-belt-copy strong {
+        font-size: clamp(2.5rem, 8vw, 3.5rem);
+    }
+}
+
+@media (max-width: 500px) {
+    .impact-belt {
+        padding: 2.5rem 1.25rem;
+    }
+
+    .impact-belt-list {
+        row-gap: 2rem;
+    }
+
+    .impact-belt-item {
+        padding: 0 1rem;
+    }
+
+    .impact-belt-item:nth-child(3) {
+        padding-left: 0;
+    }
+
+    .impact-belt-copy strong {
+        font-size: 2.4rem;
+    }
+
+    .impact-belt-copy p {
+        font-size: .7rem;
+        line-height: 1.4;
+    }
+}

@@ -146,6 +146,9 @@
     justify-content: space-between;
 
     gap: 1rem;
+    .a{
+        text-decoration: none;
+    }
 }
 
 .grouping {
@@ -158,7 +161,7 @@
 }
 
 .date {
-    background: #03AC6B;
+    background: #03c078;
 
     border-radius: 18px;
 
@@ -208,7 +211,7 @@
 .entry {
     padding: 10px 16px;
 
-    background: rgb(168, 255, 168);
+    background: rgb(236, 238, 236);
 
     color: rgb(0, 82, 22);
 
@@ -219,7 +222,14 @@
     font-size: 12px;
 
     white-space: nowrap;
+   
+
 }
+.container a {
+    text-decoration: none;
+    
+}
+
 
 
 /* =========================
@@ -612,5 +622,124 @@
         width: 100%;
 
         justify-content: center;
+    }
+}
+.hero2-screen {
+    width: 100%;
+    padding: 6rem 1.5rem;
+    box-sizing: border-box;
+    background: #010e01;
+    color: #fff;
+}
+
+.hero2-content {
+    width: min(680px, 100%);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero2-label {
+    display: block;
+    margin-bottom: 1rem;
+    color: #03ac6b;
+    font-family: "Syne", sans-serif;
+    font-size: .6rem;
+    font-weight: 700;
+    letter-spacing: .2em;
+}
+
+.hero2-title {
+    margin: 0;
+    color: #03AC6B;
+    font-family: "Syne", sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -.045em;
+}
+
+.hero2-description {
+    max-width: 500px;
+    margin: 1.25rem auto 0;
+    color: rgba(255, 255, 255, .55);
+    font-size: .85rem;
+    line-height: 1.65;
+}
+
+.hero2-input {
+    width: min(500px, 100%);
+    margin: 2rem auto 0;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, .16);
+    border-radius: 28px;
+    background: rgba(255, 255, 255, .04);
+}
+
+.email-input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px 14px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    font-family: inherit;
+    font-size: .78rem;
+}
+
+.email-input::placeholder {
+    color: rgba(255, 255, 255, .35);
+}
+
+.hero2-input .join-brotherhood {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 17px;
+    border: none;
+    border-radius: 28px;
+    background: #03ac6b;
+    color: #fff;
+    font-family: "Syne", sans-serif;
+    font-size: .7rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .25s ease;
+}
+
+.hero2-input .join-brotherhood:hover {
+    background: #04bd77;
+}
+
+.hero2-input .join-brotherhood svg {
+    font-size: .65rem;
+}
+
+@media (max-width: 600px) {
+    .hero2-screen {
+        padding: 5rem 1.25rem;
+    }
+
+    .hero2-title {
+        font-size: 2rem;
+    }
+
+    .hero2-description {
+        font-size: .78rem;
+    }
+
+    .hero2-input {
+        padding: 5px;
+    }
+
+    .email-input {
+        padding: 12px 10px;
+    }
+
+    .hero2-input .join-brotherhood {
+        padding: 12px 14px;
     }
 }
