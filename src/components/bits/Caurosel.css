@@ -1,0 +1,260 @@
+.carousel-page {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Georgia, serif;
+  padding: 3rem 1.5rem;
+  overflow: hidden;
+  background: #F7F4ED;
+}
+
+.carousel-page::before {
+  content: "JUST US BOYS";
+  display: block;
+  color: #173b24;
+  font-family: "Courier New", Courier, monospace;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 1.3rem;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+}
+
+/* ================= BACKGROUND DOTS ================= */
+
+.hero-dots {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: radial-gradient(
+    rgba(52, 125, 67, 0.32) 2px,
+    transparent 2px
+  );
+  background-size: 28px 28px;
+  opacity: 1;
+}
+
+.hero-dots::before,
+.hero-dots::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(110, 200, 119, 0.18);
+  filter: blur(1px);
+}
+
+.hero-dots::before {
+  width: 260px;
+  height: 260px;
+  top: -100px;
+  left: -80px;
+}
+
+.hero-dots::after {
+  width: 320px;
+  height: 320px;
+  right: -120px;
+  bottom: -140px;
+}
+
+.hero-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: rgba(110, 200, 119, 0.08);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ================= WRAPPER ================= */
+
+.carousel-wrapper {
+  position: relative;
+  width: min(620px, 88vw);
+  aspect-ratio: 3 / 2;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+/* ================= IMAGE ================= */
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 1;
+  transform: translateX(0);
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+
+.carousel-image.animating {
+  opacity: 0;
+  transform: translateX(calc(var(--dir) * 40px));
+}
+
+/* ================= CAPTION ================= */
+
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    transparent,
+    rgba(0, 0, 0, 0.8)
+  );
+  padding: 3rem 1.5rem 1.2rem;
+  pointer-events: none;
+}
+
+.carousel-caption p {
+  color: #f0ede8;
+  margin: 0;
+  font-size: clamp(0.8rem, 1.8vw, 0.95rem);
+  letter-spacing: 0.06em;
+  font-style: italic;
+}
+
+/* ================= NAV BUTTONS ================= */
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(6px);
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.nav:hover {
+  background: rgba(0, 0, 0, 0.7);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.nav.left {
+  left: 12px;
+}
+
+.nav.right {
+  right: 12px;
+}
+
+/* ================= SLIDER DOTS ================= */
+
+.dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 1.2rem;
+  z-index: 2;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  background: rgba(23, 59, 36, 0.25);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  width: 30px;
+  height: 10px;
+  border-radius: 6px;
+  background: #3f914c;
+  box-shadow: 0 0 12px rgba(63, 145, 76, 0.4);
+}
+
+/* ================= COUNTER ================= */
+
+.counter {
+  color: rgba(23, 59, 36, 0.45);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  margin-top: 0.9rem;
+  font-family: "Courier New", monospace;
+  z-index: 2;
+  position: relative;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+  .carousel-page {
+    min-height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .carousel-page::before {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .carousel-wrapper {
+    width: 94vw;
+    aspect-ratio: 4 / 3;
+  }
+
+  .nav {
+    width: 34px;
+    height: 34px;
+    font-size: 15px;
+  }
+
+  .nav.left {
+    left: 8px;
+  }
+
+  .nav.right {
+    right: 8px;
+  }
+
+  .carousel-caption {
+    padding: 2.5rem 1rem 0.9rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.78rem;
+  }
+
+  .dots {
+    margin-top: 1rem;
+  }
+
+  .dot.active {
+    width: 28px;
+    height: 9px;
+  }
+
+  .counter {
+    margin-top: 0.7rem;
+  }
+}
