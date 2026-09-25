@@ -559,7 +559,6 @@
     line-height: 1.6;
 }
 
-
 /* =========================
    SOCIAL MEDIA
 ========================= */
@@ -584,8 +583,8 @@
 .social-media a:hover,
 .social-media a:active {
     text-decoration: none;
-    color: #010e01;
-    -webkit-text-fill-color: #010e01; /* Safari mobile ignores plain color on auto-detected links (email/phone) without this */
+    color: #010e01 !important;
+    -webkit-text-fill-color: #010e01 !important;
 }
 
 .social-media button {
@@ -608,6 +607,20 @@
     transition: 0.3s ease;
 
     min-width: 140px;
+
+    color: #010e01 !important;
+    -webkit-text-fill-color: #010e01 !important;
+}
+
+.social-media button span {
+    color: #010e01 !important;
+    -webkit-text-fill-color: #010e01 !important;
+}
+
+.social-media button svg {
+    color: #010e01 !important;
+    fill: #010e01 !important;
+    -webkit-text-fill-color: #010e01 !important;
 }
 
 .social-media button:hover {
@@ -689,7 +702,6 @@
         font-size: 14px;
     }
 }
-
 
 /* =========================
    SMALL MOBILE

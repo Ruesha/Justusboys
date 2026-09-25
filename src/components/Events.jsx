@@ -15,7 +15,7 @@ const Events = () => {
                 <EventsComponent
                     month={"OCT"}
                     day={"31"}
-                    event_title={"JustUsBoys Debut Event"}
+                    event_title={"JustUsBoys Inaugural Event"}
                     location={"Lagos"}
                     time={"10:00 AM"}
                     mode_of_entry={"Register"}
