@@ -4,7 +4,10 @@
     position: relative;
     width: 100%;
     height: 100vh;
+    height: 100dvh; /* iOS Safari: use the real visible viewport, not the one behind the address bar */
     min-height: 700px;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
     overflow: hidden;
     box-sizing: border-box;
     background:
@@ -97,7 +100,6 @@
     text-align: center;
     color: white;
     padding-top: 0;
-    transform: translateY(-35px);
     box-sizing: border-box;
 }
 
@@ -207,7 +209,7 @@
     z-index: 4;
     left: clamp(1.25rem, 4vw, 4rem);
     right: clamp(1.25rem, 4vw, 4rem);
-    bottom: 28px;
+    bottom: calc(28px + env(safe-area-inset-bottom, 0px)); /* clear the home-indicator bar */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -239,7 +241,6 @@
         width: calc(100% - 32px);
         height: calc(100% - 70px);
         padding-top: 0;
-        transform: translateY(-20px);
     }
 
     .hero-dots {
@@ -264,7 +265,7 @@
     }
 
     .hero-bottom {
-        bottom: 20px;
+        bottom: calc(20px + env(safe-area-inset-bottom, 0px));
     }
 }
 
@@ -280,9 +281,6 @@
     }
     .hero-title {
         margin-top: 1.5rem;
-    }
-    .hero-content {
-        transform: translateY(-15px);
     }
     .hero-title {
         margin-top: 1.8rem;
