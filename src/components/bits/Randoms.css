@@ -435,9 +435,14 @@
     width: 100%;
 }
 
-.social-media a {
+.social-media a,
+.social-media a:link,
+.social-media a:visited,
+.social-media a:hover,
+.social-media a:active {
     text-decoration: none;
     color: #010e01;
+    -webkit-text-fill-color: #010e01; /* Safari mobile ignores plain color on auto-detected links (email/phone) without this */
 }
 
 .social-media button {
