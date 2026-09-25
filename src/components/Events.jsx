@@ -6,7 +6,7 @@ const Events = () => {
         <div className="event-section">
             <h5>UPCOMING</h5>
 
-            <h1>Events & Gatherings</h1>
+            <h1>Event & Gathering</h1>
             <span className="event-description">
                 Come through. No tie needed.
             </span>
@@ -22,7 +22,7 @@ const Events = () => {
                     link={"https://tinyurl.com/2x3whnhw"}
                 />
 
-                <EventsComponent
+                {/* <EventsComponent
                     month={"DEC"}
                     day={"07"}
                     event_title={"Mentorship & Career Panel"}
@@ -38,7 +38,7 @@ const Events = () => {
                     location={"Africa"}
                     time={"10:00 AM"}
                     mode_of_entry={"Coming Soon"}
-                />
+                /> */}
             </div>
         </div>
     )
