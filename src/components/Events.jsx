@@ -1,5 +1,5 @@
-
 import { EventsComponent } from "./bits/Randoms"
+import flyer from "../assets/flyer.png"
 
 const Events = () => {
     return (
@@ -20,29 +20,11 @@ const Events = () => {
                     time={"10:00 AM"}
                     mode_of_entry={"Register"}
                     link={"https://tinyurl.com/2x3whnhw"}
+                    flyer={flyer}
                 />
-
-                {/* <EventsComponent
-                    month={"DEC"}
-                    day={"07"}
-                    event_title={"Mentorship & Career Panel"}
-                    location={"Abuja"}
-                    time={"10:00 AM"}
-                    mode_of_entry={"Coming Soon"}
-                />
-
-                <EventsComponent
-                    month={"FEB"}
-                    day={"27"}
-                    event_title={"Annual Justusboys Retreat"}
-                    location={"Africa"}
-                    time={"10:00 AM"}
-                    mode_of_entry={"Coming Soon"}
-                /> */}
             </div>
         </div>
     )
 }
 
 export default Events
-
